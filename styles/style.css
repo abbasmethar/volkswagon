@@ -1,0 +1,269 @@
+/* css reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+a{
+    text-decoration: none;
+    
+}
+header{
+    padding: 20px 20px 30px 20px;
+    background:linear-gradient(to bottom, rgba(0,0,0,1)0% ,rgba(0,0,0,0)100%);
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+
+
+}
+nav .logo img{
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* font-bars */
+header nav .fa-bars{  
+    display: none;
+}
+
+@media(max-width:767px){
+    header nav .fa-bars{  
+        display: block;
+        color: white;
+        font-size: 28px;
+    }
+ 
+}
+
+.navbar .menu{
+    display: flex;
+}
+
+@media(max-width:767px){
+    .navbar .menu{
+        display: block;
+        background-color: #000000;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 70px;
+        padding: 30px 20px;
+        display: none;
+    }
+
+    header .menu.open{
+        display: block;
+    }
+    .navbar li{
+        margin-bottom: 10px;
+    }
+
+
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+   
+}
+.navbar li{
+    margin-right: 30px;
+    
+}
+.navbar a{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    transition: color ease  0.4s;
+
+}
+.navbar a:hover{
+    color: #F70142;
+}
+
+
+.navbar li.active a{
+    border-bottom: 2px solid #F70142;
+     /*padding: 10px 0;  No idea if it is correct way to down bottom line */
+   
+}
+
+
+/* hero  */
+.hero{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    
+
+}
+.hero img{
+    width: 100%;
+}
+
+
+
+
+.hero .hero-info{
+    position: absolute;
+    top: 50%;
+    left: 78px;
+    transform: translateY(-50%);
+    /* outline: 1px solid white;   just outline used to recognize div*/
+    max-width: 405px;
+
+
+    
+}
+.hero-info h1{
+    color: white;
+    font-size: 74px;
+    font-weight: 900;
+    line-height: 78px;
+    margin-bottom: 10px;
+
+
+}
+.hero-info h1 span{
+    font-size: 38px;
+    font-weight: 300;
+    display: block;
+}
+
+.hero .hero-info p{
+    color: white;
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 31px;
+}
+.hero-info .cta-btn{
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    background: #F70142;
+    padding: 10px 30px;
+    border-radius: 25px;
+    margin-top: 33px;
+    transition: background-color ease  0.5s;
+}
+.hero-info .cta-btn:hover{
+    background-color: black;
+}
+
+/* swiper bullet */
+.hero .swiper-pagination{
+    bottom: 180px;
+    text-align: right;
+    padding-right: 78px;
+}
+
+@media(max-width:767px){
+    
+    .hero img{
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .hero .hero-info{
+        position: absolute;
+        top: auto;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        max-width: 390px;
+        /* background-color: #000000ab;
+        padding: 15px 15px 30px 15px;
+        border-radius: 15px; */
+    }
+
+     .hero-info h1{
+        
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 45px;
+        margin-bottom: 12px;
+    }
+
+    .hero-info h1 span{
+        font-size: 32px;
+        font-weight: 400;
+        display: block;
+    }
+    .hero .hero-info p{
+       
+        font-size: 17px;
+        line-height: 25px;
+        margin-bottom: 35px;
+    }
+    .hero-info .cta-btn{
+        
+        font-size: 15px;
+        font-weight: 600;
+        background: #F70142;
+        padding: 10px 20px;
+        border-radius: 25px;
+        transition: background-color ease  0.5s;
+    } 
+
+    .hero .swiper-pagination {
+        bottom: 42px;
+        text-align: right;
+        padding-right: 30px;
+    }
+    
+}
+
+
+
+
+.hero .swiper-pagination .swiper-pagination-bullet{
+    width: 19px;
+    height: 19px;
+    border: white 2px solid;
+    background: transparent;
+    opacity: 1; 
+
+}
+.hero .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    border: #F70142 2px solid ;
+}
+
+.hero .swiper-slide::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    left: 0;
+    bottom: 0px;
+    background:linear-gradient(to top, rgba(0,0,0,1)0% ,rgba(0,0,0,0)100%);
+}
+
+@media(max-width:767px){
+    header{
+        padding: 20px 20px 10px 20px;
+        
+    }
+
+    nav .logo img{
+        width: 45px;
+        height: 45px;
+       
+
+    }
+    .hero .swiper-pagination .swiper-pagination-bullet{
+        width: 13px;
+         height: 13px;
+    }
+
+}
